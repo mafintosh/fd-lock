@@ -7,10 +7,13 @@
     "napi-macros": "^1.8.2"
   },
   "devDependencies": {
+    "prebuildify": "^2.11.0",
     "tape": "^4.9.2"
   },
   "scripts": {
-    "test": "tape test.js"
+    "test": "tape test.js",
+    "prebuild": "prebuildify --napi",
+    "prebuild-ia32": "prebuildify --napi --arch=ia32"
   },
   "repository": {
     "type": "git",

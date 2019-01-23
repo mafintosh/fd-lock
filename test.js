@@ -49,24 +49,26 @@ tape('two in different processes', function (assert) {
   assert.ok(lock(fd))
 
   {
-    const { stdout } = spawnSync(process.execPath, [ '-e', `
+    const { stdout, stderr } = spawnSync(process.execPath, [ '-e', `
       const lock = require('${__dirname}')
       const { openSync } = require('fs')
       console.log(lock(openSync('${__filename}', 'r')))
     ` ])
 
+    assert.same(stderr.toString(), '')
     assert.same(stdout.toString().trim(), 'false', 'Other process could not lock')
   }
 
   closeSync(fd)
 
   {
-    const { stdout } = spawnSync(process.execPath, [ '-e', `
+    const { stdout, stderr } = spawnSync(process.execPath, [ '-e', `
       const lock = require('${__dirname}')
       const { openSync } = require('fs')
       console.log(lock(openSync('${__filename}', 'r')))
     ` ])
 
+    assert.same(stderr.toString(), '')
     assert.same(stdout.toString().trim(), 'true', 'Other process could lock')
   }
 

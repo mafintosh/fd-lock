@@ -50,9 +50,9 @@ tape('two in different processes', function (assert) {
 
   {
     const { stdout, stderr } = spawnSync(process.execPath, [ '-e', `
-      const lock = require('${__dirname}')
+      const lock = require(${JSON.stringify(__dirname)})
       const { openSync } = require('fs')
-      console.log(lock(openSync('${__filename}', 'r')))
+      console.log(lock(openSync(${JSON.stringify(__filename)}, 'r')))
     ` ])
 
     assert.same(stderr.toString(), '')
@@ -63,9 +63,9 @@ tape('two in different processes', function (assert) {
 
   {
     const { stdout, stderr } = spawnSync(process.execPath, [ '-e', `
-      const lock = require('${__dirname}')
+      const lock = require(${JSON.stringify(__dirname)})
       const { openSync } = require('fs')
-      console.log(lock(openSync('${__filename}', 'r')))
+      console.log(lock(openSync(${JSON.stringify(__filename)}, 'r')))
     ` ])
 
     assert.same(stderr.toString(), '')

@@ -1,6 +1,6 @@
 {
   "name": "fd-lock",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "Advisory cross-platform lock on a file using a file descriptor to it.",
   "main": "index.js",
   "dependencies": {

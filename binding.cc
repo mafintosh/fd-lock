@@ -6,7 +6,7 @@
 #include <sys/file.h>
 #endif
 
-NAPI_METHOD(lock_fd) {
+NAPI_METHOD(fd_lock) {
   NAPI_ARGV(1)
   NAPI_ARGV_UINT32(fd, 0)
 
@@ -21,7 +21,7 @@ NAPI_METHOD(lock_fd) {
   NAPI_RETURN_UINT32(locked)
 }
 
-NAPI_METHOD(unlock_fd) {
+NAPI_METHOD(fd_unlock) {
   NAPI_ARGV(1)
   NAPI_ARGV_UINT32(fd, 0)
 
@@ -38,6 +38,6 @@ NAPI_METHOD(unlock_fd) {
 }
 
 NAPI_INIT () {
-  NAPI_EXPORT_FUNCTION(lock_fd)
-  NAPI_EXPORT_FUNCTION(unlock_fd)
+  NAPI_EXPORT_FUNCTION(fd_lock)
+  NAPI_EXPORT_FUNCTION(fd_unlock)
 }

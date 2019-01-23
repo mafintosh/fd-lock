@@ -1,5 +1,5 @@
 {
-  "name": "lock-fd",
+  "name": "fd-lock",
   "version": "0.0.0",
   "description": "Advisory cross-platform lock on a file using a file descriptor to it.",
   "main": "index.js",
@@ -14,12 +14,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/mafintosh/lock-fd.git"
+    "url": "https://github.com/mafintosh/fd-lock.git"
   },
   "author": "Mathias Buus (@mafintosh)",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/mafintosh/lock-fd/issues"
+    "url": "https://github.com/mafintosh/fd-lock/issues"
   },
-  "homepage": "https://github.com/mafintosh/lock-fd"
+  "homepage": "https://github.com/mafintosh/fd-lock"
 }

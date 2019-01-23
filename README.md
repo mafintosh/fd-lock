@@ -1,15 +1,15 @@
-# lock-fd
+# fd-lock
 
 Advisory cross-platform lock on a file using a file descriptor to it.
 
 ```
-npm install lock-fd
+npm install fd-lock
 ```
 
 ## Usage
 
 ``` js
-const lock = require('lock-fd')
+const lock = require('fd-lock')
 
 // Can we lock the file using the fd?
 console.log(lock(fd))

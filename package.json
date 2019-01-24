@@ -14,7 +14,8 @@
   "scripts": {
     "test": "tape test.js",
     "prebuild": "prebuildify --napi",
-    "prebuild-ia32": "prebuildify --napi --arch=ia32"
+    "prebuild-ia32": "prebuildify --napi --arch=ia32",
+    "install": "node-gyp-build"
   },
   "repository": {
     "type": "git",

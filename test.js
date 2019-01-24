@@ -56,7 +56,7 @@ tape('two in different processes', function (assert) {
     ` ])
 
     assert.same(stderr.toString(), '')
-    assert.same(stdout.toString().trim(), 'false', 'Other process could not lock')
+    assert.same(stdout.toString().trim(), 'false', 'other process could not lock')
   }
 
   closeSync(fd)
@@ -69,7 +69,7 @@ tape('two in different processes', function (assert) {
     ` ])
 
     assert.same(stderr.toString(), '')
-    assert.same(stdout.toString().trim(), 'true', 'Other process could lock')
+    assert.same(stdout.toString().trim(), 'true', 'other process could lock')
   }
 
   assert.end()

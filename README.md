@@ -6,8 +6,6 @@ Advisory cross-platform lock on a file using a file descriptor to it.
 npm install fd-lock
 ```
 
-[![build status](https://travis-ci.org/mafintosh/fd-lock.svg?branch=master)](https://travis-ci.org/mafintosh/fd-lock)
-
 ## Usage
 
 ``` js

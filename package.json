@@ -4,11 +4,11 @@
   "description": "Advisory cross-platform lock on a file using a file descriptor to it.",
   "main": "index.js",
   "dependencies": {
-    "napi-macros": "^1.8.2",
-    "node-gyp-build": "^3.8.0"
+    "napi-macros": "^2.0.0",
+    "node-gyp-build": "^4.2.2"
   },
   "devDependencies": {
-    "prebuildify": "^2.11.0",
+    "prebuildify": "^3.0.4",
     "tape": "^4.9.2"
   },
   "scripts": {
